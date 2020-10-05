@@ -15,26 +15,24 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:/context-root.xml"})
+@ContextConfiguration(locations = { "classpath:/context-root.xml" })
 public class sqlsessionTest {
 	protected static final Log log = LogFactory.getLog(sqlsessionTest.class);
-	
+
 	@After
 	public void tearDown() throws Exception {
-	System.out.println();
+		System.out.println();
 	}
 
-	
-	
 	@Autowired
 	private SqlSessionFactory sqlSessionFactory;
+
 	@Test
 	public void testsqlSessionFactory() throws SQLException {
-	log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-	SqlSession session = sqlSessionFactory.openSession();
-	log.debug("session" + session);
-	Assert.assertNotNull(session);
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		SqlSession session = sqlSessionFactory.openSession();
+		log.debug("session" + session);
+		Assert.assertNotNull(session);
 	}
-
 
 }

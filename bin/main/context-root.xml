@@ -11,6 +11,10 @@
 		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+
+
  <import resource="classpath:context-datasource.xml"/>
- <import resource="classpath:context-sqlsession.xml"/>
+ <import resource="classpath:contest-sqlsession.xml"/>
+ 
+ <context:component-scan base-package="mybatis_spring_study.mapper"/>
 </beans>
