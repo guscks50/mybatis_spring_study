@@ -1,6 +1,7 @@
 package mybatis_spring_study.service.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import mybatis_spring_study.dto.Department;
@@ -9,6 +10,7 @@ import mybatis_spring_study.mapper.DepartmentMapper;
 import mybatis_spring_study.mapper.EmployeeMapper;
 import mybatis_spring_study.service.TransctionService;
 
+@Service
 public class TransactionServiceImpl implements TransctionService {
 	@Autowired
 	private DepartmentMapper deptMapper;
