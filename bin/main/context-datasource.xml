@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder location="classpath:/application.properties"/>
+	
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<constructor-arg>
+			<props>
+				<prop key="jdbcUrl">${jdbcUrl}</prop>
+				<prop key="username">${dataSource.user}</prop>
+				<prop key="password">${dataSource.password}</prop>
+			</props>
+		</constructor-arg>
+		<property name="minimumIdle" value="10"></property>
+		<property name="maximumPoolSize" value="100"></property>
+	</bean>
+	
+	<bean  id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig"></constructor-arg>
+	</bean>
+	
+</beans>

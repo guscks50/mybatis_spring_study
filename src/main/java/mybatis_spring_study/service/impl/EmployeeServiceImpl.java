@@ -1,18 +1,16 @@
-package mybatis_spring_study.service.Impl;
+package mybatis_spring_study.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 import mybatis_spring_study.dto.Employee;
 import mybatis_spring_study.mapper.EmployeeMapper;
 import mybatis_spring_study.service.EmployeeService;
-@Service
-public class EmployeeDaoServiceImpl implements EmployeeService {
 
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
 	private EmployeeMapper mapper;
-
 	
 	@Override
 	public int addEmployee(Employee employee) {
@@ -21,7 +19,7 @@ public class EmployeeDaoServiceImpl implements EmployeeService {
 
 	@Override
 	public int delEmployee(Employee employee) {
-		return mapper.deleteEmplyoee(employee);
+		return mapper.deleteEmployee(employee);
 	}
 
 }

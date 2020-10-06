@@ -1,7 +1,5 @@
 package mybatis_spring_study.mapper;
 
-import static org.junit.Assert.fail;
-
 import java.util.List;
 
 import org.apache.ibatis.logging.Log;
@@ -16,17 +14,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import mybatis_spring_study.config.ContextRoot;
 import mybatis_spring_study.dto.Department;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = { ContextRoot.class })
+@ContextConfiguration(locations = { "classpath:/context-root.xml" })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DepartmentMapperTest {
-	protected static final Log log = LogFactory.getLog(DepartmentMapperTest.class);
+	private static final Log log = LogFactory.getLog(DepartmentMapperTest.class);
 
 	@After
-	public void tearDown() throws Exception {
+	public void testDown() throws Exception {
 		System.out.println();
 	}
 
@@ -36,24 +33,24 @@ public class DepartmentMapperTest {
 	@Test
 	public void test05DeleteDepartment() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department= new Department(5);
+		Department department = new Department(5, "마케팅2", 10);
 		int res = mapper.deleteDepartment(department);
 		Assert.assertEquals(1, res);
+		
 	}
 
 	@Test
 	public void test02InsertDepartment() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(5,"혁신",11);
+		Department department = new Department(5, "마케팅", 20);
 		int res = mapper.insertDepartment(department);
 		Assert.assertEquals(1, res);
 	}
-		
 
 	@Test
 	public void test03UpdateDepartment() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(5,"무결",10);
+		Department department = new Department(5, "마케팅2", 10);
 		int res = mapper.updateDepartment(department);
 		Assert.assertEquals(1, res);
 	}
@@ -69,9 +66,9 @@ public class DepartmentMapperTest {
 	@Test
 	public void test04SelectDepartmentByNo() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(5);
-		Assert.assertNotNull(department);
-		System.out.println(department);
+		Department dept = mapper.selectDepartmentByNo(new Department(1));
+		Assert.assertNotNull(dept);
+		log.debug(dept.toString());
 	}
 
 }

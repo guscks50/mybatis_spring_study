@@ -3,10 +3,10 @@
 <mapper namespace="mybatis_spring_study.mapper.EmployeeMapper">
 	
 	<insert id="insertEmployee" parameterType="Employee">
-	INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (#{empNo},#{empName},#{title},#{manager.empNo},#{salary},#{dept.deptNo})
+		INSERT INTO EMPLOYEE (EMPNO, EMPNAME,TITLE,MANAGER,SALARY, DNO) VALUES (#{empNo},#{empName},#{title},#{manager.empNo},#{salary},#{dept.deptNo})
 	</insert>
 	
-	<delete id="deleteEmplyoee" parameterType="Employee">
-		delete from employee where empno = #{empNo}
+	<delete id="deleteEmployee" parameterType="Employee">
+		DELETE FROM EMPLOYEE WHERE EMPNO = #{empNo}
 	</delete>
 </mapper>

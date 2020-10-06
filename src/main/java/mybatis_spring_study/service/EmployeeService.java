@@ -4,5 +4,6 @@ import mybatis_spring_study.dto.Employee;
 
 public interface EmployeeService {
 	public int addEmployee(Employee employee);
+	
 	public int delEmployee(Employee employee);
 }
