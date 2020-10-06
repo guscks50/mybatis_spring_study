@@ -4,8 +4,7 @@ import mybatis_spring_study.dto.Department;
 import mybatis_spring_study.dto.Employee;
 
 public interface TransactionAOPService {
+	public int trRegister(Department department,Employee employee);
 	
-	void trRegisterTransaction(Department department, Employee employee);
-	
-	void trUnRegisterTransaction(Department department, Employee employee);
+	public int trUnRegister(Department department,Employee employee);
 }

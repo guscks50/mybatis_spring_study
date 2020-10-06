@@ -1,7 +1,5 @@
 package mybatis_spring_study.service;
 
-import static org.junit.Assert.fail;
-
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 import org.junit.After;
@@ -21,62 +19,59 @@ import mybatis_spring_study.dto.Employee;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { ContextRoot.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class TransactionAOPServiceTest {
-	private static final Log log = LogFactory.getLog(TransactionAOPServiceTest.class);
+public class TransactionServiceTest {
+	private static final Log log = LogFactory.getLog(TransactionServiceTest.class);
 
 	@Autowired
-	private TransactionAOPService service;
-
+	private TransactionService service;
+	
 	@After
-	public void testDown() throws Exception {
+	public void testDown() throws Exception{
 		System.out.println();
 	}
 
 	@Test(expected = DuplicateKeyException.class)
-	public void test1TrRegister_Dept_Fail() {
+	public void test1RegisterTransaction_Dept_Fail() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(1, "달나라", 77);
-		Employee employee = new Employee(1008, "김새론", "과장", new Employee(4377), 4000000, new Department(1));
+		Department department = new Department(1, "태스크포스", 10);
+		Employee employee = new Employee(1008, "타요", "과장", new Employee(4377), 4000000, new Department(1));
 		service.trRegister(department, employee);
 	}
-
 	@Test(expected = DuplicateKeyException.class)
-	public void test2TrRegister_Employee_Fail() {
+	public void test2RegisterTransaction_Employee_Fail() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(7, "달나라", 77);
-		Employee employee = new Employee(4377, "김새론", "과장", new Employee(4377), 4000000, new Department(1));
+		Department department = new Department(6, "태스크포스", 10);
+		Employee employee = new Employee(4377, "타요", "과장", new Employee(4377), 4000000, new Department(1));
+		service.trRegister(department, employee);
+	}
+	@Test
+	public void test3RegisterTransaction() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		Department department = new Department(6, "태스크포스", 10);
+		Employee employee = new Employee(1008, "타요", "과장", new Employee(4377), 4000000, new Department(1));
 		service.trRegister(department, employee);
 	}
 
-	@Test
-	public void test3TrRegister() {
+	@Test(expected=RuntimeException.class)
+	public void test4UnRegisterTransaction_Dept_Fail() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(7, "달나라", 77);
-		Employee employee = new Employee(1008, "김새론", "과장", new Employee(4377), 4000000, new Department(1));
-		service.trRegister(department, employee);
+		Department department = new Department(1, "태스크포스", 10);
+		Employee employee = new Employee(1008, "타요", "과장", new Employee(4377), 4000000, new Department(1));
+		service.trUnRegister(department, employee);
+		
 	}
-
-	@Test(expected = RuntimeException.class)
-	public void test4TrUnRegister_Dept_Fail() {
+	@Test(expected=RuntimeException.class)
+	public void test5UnRegisterTransaction_Employee_Fail() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(100);
-		Employee employee = new Employee(1008);
+		Department department = new Department(6, "태스크포스", 10);
+		Employee employee = new Employee(9999, "타요", "과장", new Employee(4377), 4000000, new Department(1));
 		service.trUnRegister(department, employee);
 	}
-
-	@Test(expected = RuntimeException.class)
-	public void test5TrUnRegister_Employee_Fail() {
-		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(7);
-		Employee employee = new Employee(9999);
-		service.trUnRegister(department, employee);
-	}
-	
 	@Test
-	public void test6TrUnRegister() {
+	public void test6UnRegisterTransaction() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(7);
-		Employee employee = new Employee(1008);
+		Department department = new Department(6, "태스크포스", 10);
+		Employee employee = new Employee(1008, "타요", "과장", new Employee(4377), 4000000, new Department(1));
 		service.trUnRegister(department, employee);
 	}
 

@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis_spring_study.mapper.DepartmentMapper">
-
+	
+	<sql id="selectSQL">SELECT DEPTNO,DEPTNAME,FLOOR FROM DEPARTMENT</sql>
+	
 	<select id="selectDepartmentByAll" resultType="Department">
-		SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+		<include refid="selectSQL"></include>
 	</select>
-
-	<select id="selectDepartmentByNo" parameterType="Department"
-		resultType="Department">
-		SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT WHERE DEPTNO =#{deptNo}
+	
+	<select id="selectDepartmentByNo" parameterType="Department" resultType="Department">
+		<include refid="selectSQL" /> 
+		WHERE DEPTNO =#{deptNo}
 	</select>
-
+	
 	<insert id="insertDepartment" parameterType="Department">
 		INSERT INTO DEPARTMENT VALUES(#{deptNo},#{deptName},#{floor})
 	</insert>
-
+	
 	<update id="updateDepartment" parameterType="Department">
-		UPDATE DEPARTMENT
-		SET DEPTNAME = #{deptName},FLOOR = #{floor}
-		WHERE DEPTNO = #{deptNo}
+		UPDATE DEPARTMENT SET DEPTNAME=#{deptName}, FLOOR=#{floor} WHERE DEPTNO =#{deptNo}
 	</update>
-
+	
 	<delete id="deleteDepartment" parameterType="Department">
-		DELETE FROM DEPARTMENT
-		WHERE DEPTNO = #{deptNo}
+		DELETE FROM DEPARTMENT WHERE DEPTNO = #{deptNo}
 	</delete>
 </mapper>

@@ -7,10 +7,6 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>src/main/resources/context-root.xml</config>
-		<config>src/main/resources/context-datasource.xml</config>
-		<config>src/main/resources/contest-sqlsession.xml</config>
-		<config>src/main/resources/context-transaction.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

@@ -8,9 +8,10 @@ import mybatis_spring_study.mapper.EmployeeMapper;
 import mybatis_spring_study.service.EmployeeService;
 
 @Service
-public class EmplyoeeServiceImpl implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
 	private EmployeeMapper mapper;
+		
 	@Override
 	public int addEmployee(Employee employee) {
 		return mapper.insertEmployee(employee);
