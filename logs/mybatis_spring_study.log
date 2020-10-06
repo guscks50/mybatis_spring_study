@@ -3,3 +3,775 @@
 [DEBUG] [2020-10-05 11:28] LoginTimeout30
 [DEBUG] [2020-10-05 11:34] testSqlSession()
 [DEBUG] [2020-10-05 11:34] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@139949b9
+[DEBUG] [2020-10-06 11:43] testDataSource()
+[DEBUG] [2020-10-06 11:43] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 11:43] LoginTimeout30
+[DEBUG] [2020-10-06 11:43] testSqlSession()
+[DEBUG] [2020-10-06 11:43] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@28582a0d
+[DEBUG] [2020-10-06 11:43] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:43] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 11:43] ==> Parameters: 
+[TRACE] [2020-10-06 11:43] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:43] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 11:43] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 11:43] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 11:43] <==        Row: 4, ÃÑ¹«, 7
+[DEBUG] [2020-10-06 11:43] <==      Total: 4
+[DEBUG] [2020-10-06 11:43] test02InsertDepartment()
+[DEBUG] [2020-10-06 11:43] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 11:43] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 11:43] <==    Updates: 1
+[DEBUG] [2020-10-06 11:45] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:45] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 11:45] ==> Parameters: 
+[TRACE] [2020-10-06 11:45] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:45] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 11:45] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 11:45] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 11:45] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 11:45] <==        Row: 5, Çõ½Å, 11
+[DEBUG] [2020-10-06 11:45] <==      Total: 5
+[DEBUG] [2020-10-06 11:45] test02InsertDepartment()
+[DEBUG] [2020-10-06 11:45] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 11:45] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 11:45] test03UpdateDepartment()
+[DEBUG] [2020-10-06 11:45] ==>  Preparing: update department set deptname=?, floor=? where deptno = ? ?
+[DEBUG] [2020-10-06 11:45] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer), 5(Integer)
+[DEBUG] [2020-10-06 11:45] testDataSource()
+[DEBUG] [2020-10-06 11:45] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 11:45] LoginTimeout30
+[DEBUG] [2020-10-06 11:45] testSqlSession()
+[DEBUG] [2020-10-06 11:45] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@1424e9d8
+[DEBUG] [2020-10-06 11:49] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:49] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 11:49] ==> Parameters: 
+[TRACE] [2020-10-06 11:49] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:49] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 11:49] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 11:49] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 11:49] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 11:49] <==        Row: 5, Çõ½Å, 11
+[DEBUG] [2020-10-06 11:49] <==      Total: 5
+[DEBUG] [2020-10-06 11:49] test02InsertDepartment()
+[DEBUG] [2020-10-06 11:49] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 11:49] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 11:49] test03UpdateDepartment()
+[DEBUG] [2020-10-06 11:49] ==>  Preparing: update department set deptname=?, floor=? where deptno = ? ?
+[DEBUG] [2020-10-06 11:49] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer), 5(Integer)
+[DEBUG] [2020-10-06 11:49] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 11:49] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT where deptno = ?
+[DEBUG] [2020-10-06 11:49] ==> Parameters: 5(Integer)
+[TRACE] [2020-10-06 11:49] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:49] <==        Row: 5, Çõ½Å, 11
+[DEBUG] [2020-10-06 11:49] <==      Total: 1
+[DEBUG] [2020-10-06 11:49] test05DeleteDepartment()
+[DEBUG] [2020-10-06 11:49] testDataSource()
+[DEBUG] [2020-10-06 11:49] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 11:49] LoginTimeout30
+[DEBUG] [2020-10-06 11:49] testSqlSession()
+[DEBUG] [2020-10-06 11:49] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@f794ec
+[DEBUG] [2020-10-06 11:50] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:50] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 11:50] ==> Parameters: 
+[TRACE] [2020-10-06 11:50] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:50] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 11:50] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 11:50] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 11:50] <==        Row: 4, ÃÑ¹«, 7
+[DEBUG] [2020-10-06 11:50] <==      Total: 4
+[DEBUG] [2020-10-06 11:50] test02InsertDepartment()
+[DEBUG] [2020-10-06 11:50] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 11:50] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 11:50] <==    Updates: 1
+[DEBUG] [2020-10-06 11:50] test03UpdateDepartment()
+[DEBUG] [2020-10-06 11:50] ==>  Preparing: update department set deptname=?, floor=? where deptno = ? ?
+[DEBUG] [2020-10-06 11:50] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer), 5(Integer)
+[DEBUG] [2020-10-06 11:50] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 11:50] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT where deptno = ?
+[DEBUG] [2020-10-06 11:50] ==> Parameters: 5(Integer)
+[TRACE] [2020-10-06 11:50] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:50] <==        Row: 5, Çõ½Å, 11
+[DEBUG] [2020-10-06 11:50] <==      Total: 1
+[DEBUG] [2020-10-06 11:50] test05DeleteDepartment()
+[DEBUG] [2020-10-06 11:50] testDataSource()
+[DEBUG] [2020-10-06 11:50] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 11:50] LoginTimeout30
+[DEBUG] [2020-10-06 11:50] testSqlSession()
+[DEBUG] [2020-10-06 11:50] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@61c0756c
+[DEBUG] [2020-10-06 11:51] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:51] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 11:51] ==> Parameters: 
+[TRACE] [2020-10-06 11:51] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:51] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 11:51] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 11:51] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 11:51] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 11:51] <==        Row: 5, Çõ½Å, 11
+[DEBUG] [2020-10-06 11:51] <==      Total: 5
+[DEBUG] [2020-10-06 11:51] test02InsertDepartment()
+[DEBUG] [2020-10-06 11:51] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 11:51] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 11:51] test03UpdateDepartment()
+[DEBUG] [2020-10-06 11:51] ==>  Preparing: update department set deptname=?, floor=? where deptno = ? ?
+[DEBUG] [2020-10-06 11:51] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer), 5(Integer)
+[DEBUG] [2020-10-06 11:51] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 11:51] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT where deptno = ?
+[DEBUG] [2020-10-06 11:51] ==> Parameters: 5(Integer)
+[TRACE] [2020-10-06 11:51] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:51] <==        Row: 5, Çõ½Å, 11
+[DEBUG] [2020-10-06 11:51] <==      Total: 1
+[DEBUG] [2020-10-06 11:51] test05DeleteDepartment()
+[DEBUG] [2020-10-06 11:51] testDataSource()
+[DEBUG] [2020-10-06 11:51] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 11:51] LoginTimeout30
+[DEBUG] [2020-10-06 11:51] testSqlSession()
+[DEBUG] [2020-10-06 11:51] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@f794ec
+[DEBUG] [2020-10-06 11:53] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:53] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 11:53] ==> Parameters: 
+[TRACE] [2020-10-06 11:53] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:53] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 11:53] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 11:53] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 11:53] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 11:53] <==        Row: 5, Çõ½Å, 11
+[DEBUG] [2020-10-06 11:53] <==      Total: 5
+[DEBUG] [2020-10-06 11:53] test02InsertDepartment()
+[DEBUG] [2020-10-06 11:53] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 11:53] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 11:53] test03UpdateDepartment()
+[DEBUG] [2020-10-06 11:53] ==>  Preparing: update department set deptname=?, floor=? where deptno = ? ?
+[DEBUG] [2020-10-06 11:53] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer), 5(Integer)
+[DEBUG] [2020-10-06 11:53] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 11:53] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT where deptno = ?
+[DEBUG] [2020-10-06 11:53] ==> Parameters: 5(Integer)
+[TRACE] [2020-10-06 11:53] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:53] <==        Row: 5, Çõ½Å, 11
+[DEBUG] [2020-10-06 11:53] <==      Total: 1
+[DEBUG] [2020-10-06 11:53] test05DeleteDepartment()
+[DEBUG] [2020-10-06 11:53] testDataSource()
+[DEBUG] [2020-10-06 11:53] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 11:53] LoginTimeout30
+[DEBUG] [2020-10-06 11:53] testSqlSession()
+[DEBUG] [2020-10-06 11:53] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@f794ec
+[DEBUG] [2020-10-06 12:07] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:07] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:07] ==> Parameters: 
+[TRACE] [2020-10-06 12:07] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:07] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:07] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:07] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 12:07] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:07] <==        Row: 5, Çõ½Å, 11
+[DEBUG] [2020-10-06 12:07] <==      Total: 5
+[DEBUG] [2020-10-06 12:07] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:07] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:07] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:07] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:07] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:07] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:07] <==    Updates: 1
+[DEBUG] [2020-10-06 12:07] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:07] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT where deptno = ?
+[DEBUG] [2020-10-06 12:07] ==> Parameters: 5(Integer)
+[TRACE] [2020-10-06 12:07] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:07] <==        Row: 5, ¹«°á, 10
+[DEBUG] [2020-10-06 12:07] <==      Total: 1
+[DEBUG] [2020-10-06 12:07] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:07] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:07] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:07] <==    Updates: 1
+[DEBUG] [2020-10-06 12:07] testDataSource()
+[DEBUG] [2020-10-06 12:07] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:07] LoginTimeout30
+[DEBUG] [2020-10-06 12:07] testSqlSession()
+[DEBUG] [2020-10-06 12:07] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@f794ec
+[DEBUG] [2020-10-06 12:09] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:09] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:09] ==> Parameters: 
+[TRACE] [2020-10-06 12:09] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:09] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:09] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:09] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:09] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 12:09] <==      Total: 4
+[DEBUG] [2020-10-06 12:09] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:09] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:09] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:09] <==    Updates: 1
+[DEBUG] [2020-10-06 12:09] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:09] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:09] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:09] <==    Updates: 1
+[DEBUG] [2020-10-06 12:09] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:09] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT where deptno = ?
+[DEBUG] [2020-10-06 12:09] ==> Parameters: 5(Integer)
+[TRACE] [2020-10-06 12:09] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:09] <==        Row: 5, ¹«°á, 10
+[DEBUG] [2020-10-06 12:09] <==      Total: 1
+[DEBUG] [2020-10-06 12:09] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:09] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:09] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:09] <==    Updates: 1
+[DEBUG] [2020-10-06 12:09] testDataSource()
+[DEBUG] [2020-10-06 12:09] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:09] LoginTimeout30
+[DEBUG] [2020-10-06 12:09] testSqlSession()
+[DEBUG] [2020-10-06 12:09] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@2af073c9
+[DEBUG] [2020-10-06 12:11] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:11] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:11] ==> Parameters: 
+[TRACE] [2020-10-06 12:11] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:11] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:11] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:11] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:11] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 12:11] <==      Total: 4
+[DEBUG] [2020-10-06 12:11] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:11] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:11] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:11] <==    Updates: 1
+[DEBUG] [2020-10-06 12:11] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:11] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:11] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:11] <==    Updates: 1
+[DEBUG] [2020-10-06 12:11] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:11] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT where deptno = ?
+[DEBUG] [2020-10-06 12:11] ==> Parameters: 5(Integer)
+[TRACE] [2020-10-06 12:11] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:11] <==        Row: 5, ¹«°á, 10
+[DEBUG] [2020-10-06 12:11] <==      Total: 1
+[DEBUG] [2020-10-06 12:11] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:11] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:11] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:11] <==    Updates: 1
+[DEBUG] [2020-10-06 12:11] testDataSource()
+[DEBUG] [2020-10-06 12:11] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:11] LoginTimeout30
+[DEBUG] [2020-10-06 12:11] testSqlSession()
+[DEBUG] [2020-10-06 12:11] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@2af073c9
+[DEBUG] [2020-10-06 12:11] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:11] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:11] ==> Parameters: 
+[TRACE] [2020-10-06 12:11] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:11] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:11] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:11] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:11] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 12:11] <==      Total: 4
+[DEBUG] [2020-10-06 12:11] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:11] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:11] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:11] <==    Updates: 1
+[DEBUG] [2020-10-06 12:11] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:11] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:11] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:11] <==    Updates: 1
+[DEBUG] [2020-10-06 12:11] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:11] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT where deptno = ?
+[DEBUG] [2020-10-06 12:11] ==> Parameters: 5(Integer)
+[TRACE] [2020-10-06 12:11] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:11] <==        Row: 5, ¹«°á, 10
+[DEBUG] [2020-10-06 12:11] <==      Total: 1
+[DEBUG] [2020-10-06 12:11] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:11] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:11] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:11] <==    Updates: 1
+[DEBUG] [2020-10-06 12:11] testDataSource()
+[DEBUG] [2020-10-06 12:11] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:11] LoginTimeout30
+[DEBUG] [2020-10-06 12:11] testSqlSession()
+[DEBUG] [2020-10-06 12:11] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@2af073c9
+[DEBUG] [2020-10-06 12:14] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:14] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:14] ==> Parameters: 
+[TRACE] [2020-10-06 12:14] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:14] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:14] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:14] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:14] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 12:14] <==      Total: 4
+[DEBUG] [2020-10-06 12:14] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:14] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:14] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:14] <==    Updates: 1
+[DEBUG] [2020-10-06 12:14] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:14] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:14] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:14] <==    Updates: 1
+[DEBUG] [2020-10-06 12:14] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:14] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:14] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:14] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:14] <==    Updates: 1
+[DEBUG] [2020-10-06 12:14] testDataSource()
+[DEBUG] [2020-10-06 12:14] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:14] LoginTimeout30
+[DEBUG] [2020-10-06 12:14] testSqlSession()
+[DEBUG] [2020-10-06 12:14] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@6144abcc
+[DEBUG] [2020-10-06 12:37] testDataSource()
+[DEBUG] [2020-10-06 12:37] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:37] LoginTimeout30
+[DEBUG] [2020-10-06 12:37] testSqlSession()
+[DEBUG] [2020-10-06 12:37] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@767de648
+[DEBUG] [2020-10-06 12:37] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:37] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:37] ==> Parameters: 
+[TRACE] [2020-10-06 12:37] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:37] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:37] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:37] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:37] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 12:37] <==      Total: 4
+[DEBUG] [2020-10-06 12:37] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:37] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:37] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:37] <==    Updates: 1
+[DEBUG] [2020-10-06 12:37] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:37] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:37] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:37] <==    Updates: 1
+[DEBUG] [2020-10-06 12:37] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:37] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:37] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:37] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:37] <==    Updates: 1
+[DEBUG] [2020-10-06 12:37] test01InsertEmployee()
+[DEBUG] [2020-10-06 12:37] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES ?,?,?#,{manager.empNo},?,?
+[DEBUG] [2020-10-06 12:37] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:37] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 12:37] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES ?,?,?#,{manager.empNo},?,?
+[DEBUG] [2020-10-06 12:44] test01InsertEmployee()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: insert into employee (empno , empname ,title ,manager ,salary ,dno ) VALUES ()?,?,?#,{manager.empNo},?,?)
+[DEBUG] [2020-10-06 12:44] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:44] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: insert into employee (empno , empname ,title ,manager ,salary ,dno ) VALUES ()?,?,?#,{manager.empNo},?,?)
+[DEBUG] [2020-10-06 12:44] testDataSource()
+[DEBUG] [2020-10-06 12:44] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:44] LoginTimeout30
+[DEBUG] [2020-10-06 12:44] testSqlSession()
+[DEBUG] [2020-10-06 12:44] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@ab8208
+[DEBUG] [2020-10-06 12:44] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:44] ==> Parameters: 
+[TRACE] [2020-10-06 12:44] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:44] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:44] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:44] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:44] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 12:44] <==      Total: 4
+[DEBUG] [2020-10-06 12:44] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:44] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:44] <==    Updates: 1
+[DEBUG] [2020-10-06 12:44] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:44] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:44] <==    Updates: 1
+[DEBUG] [2020-10-06 12:44] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:44] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:44] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:44] <==    Updates: 1
+[DEBUG] [2020-10-06 12:44] test01InsertEmployee()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: insert into employee (empno , empname ,title ,manager ,salary ,dno ) VALUES ()?,?,?#,{manager.empNo},?,?)
+[DEBUG] [2020-10-06 12:44] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:44] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: insert into employee (empno , empname ,title ,manager ,salary ,dno ) VALUES ()?,?,?#,{manager.empNo},?,?)
+[DEBUG] [2020-10-06 12:44] testDataSource()
+[DEBUG] [2020-10-06 12:44] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:44] LoginTimeout30
+[DEBUG] [2020-10-06 12:44] testSqlSession()
+[DEBUG] [2020-10-06 12:44] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@ab8208
+[DEBUG] [2020-10-06 12:44] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:44] ==> Parameters: 
+[TRACE] [2020-10-06 12:44] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:44] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:44] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:44] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:44] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 12:44] <==      Total: 4
+[DEBUG] [2020-10-06 12:44] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:44] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:44] <==    Updates: 1
+[DEBUG] [2020-10-06 12:44] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:44] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:44] <==    Updates: 1
+[DEBUG] [2020-10-06 12:44] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:44] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:44] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:44] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:44] <==    Updates: 1
+[DEBUG] [2020-10-06 12:45] test01InsertEmployee()
+[DEBUG] [2020-10-06 12:45] ==>  Preparing: insert into employee (empno , empname ,title ,manager ,salary ,dno ) VALUES (?,?,?#,{manager.empNo},?,?)
+[DEBUG] [2020-10-06 12:45] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:45] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 12:45] ==>  Preparing: insert into employee (empno , empname ,title ,manager ,salary ,dno ) VALUES (?,?,?#,{manager.empNo},?,?)
+[DEBUG] [2020-10-06 12:45] testDataSource()
+[DEBUG] [2020-10-06 12:45] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:45] LoginTimeout30
+[DEBUG] [2020-10-06 12:45] testSqlSession()
+[DEBUG] [2020-10-06 12:45] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@ab8208
+[DEBUG] [2020-10-06 12:45] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:45] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:45] ==> Parameters: 
+[TRACE] [2020-10-06 12:45] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:45] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:45] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:45] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:45] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 12:45] <==      Total: 4
+[DEBUG] [2020-10-06 12:45] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:45] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:45] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:45] <==    Updates: 1
+[DEBUG] [2020-10-06 12:45] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:45] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:45] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:45] <==    Updates: 1
+[DEBUG] [2020-10-06 12:45] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:45] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:45] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:45] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:45] <==    Updates: 1
+[DEBUG] [2020-10-06 12:49] test01InsertEmployee()
+[DEBUG] [2020-10-06 12:49] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?#,{manager.empNo},?,?)
+[DEBUG] [2020-10-06 12:49] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:49] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 12:49] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?#,{manager.empNo},?,?)
+[DEBUG] [2020-10-06 12:49] testDataSource()
+[DEBUG] [2020-10-06 12:49] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:49] LoginTimeout30
+[DEBUG] [2020-10-06 12:49] testSqlSession()
+[DEBUG] [2020-10-06 12:49] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@ab8208
+[DEBUG] [2020-10-06 12:49] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:49] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:49] ==> Parameters: 
+[TRACE] [2020-10-06 12:49] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:49] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:49] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:49] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:49] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 12:49] <==      Total: 4
+[DEBUG] [2020-10-06 12:49] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:49] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:49] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:49] <==    Updates: 1
+[DEBUG] [2020-10-06 12:49] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:49] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:49] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:49] <==    Updates: 1
+[DEBUG] [2020-10-06 12:49] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:49] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:49] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:49] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:49] <==    Updates: 1
+[DEBUG] [2020-10-06 12:51] test01InsertEmployee()
+[DEBUG] [2020-10-06 12:51] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 12:51] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:51] <==    Updates: 1
+[DEBUG] [2020-10-06 12:51] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 12:51] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 12:51] testDataSource()
+[DEBUG] [2020-10-06 12:51] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:51] LoginTimeout30
+[DEBUG] [2020-10-06 12:51] testSqlSession()
+[DEBUG] [2020-10-06 12:51] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@2b34c6d6
+[DEBUG] [2020-10-06 12:51] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:51] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:51] ==> Parameters: 
+[TRACE] [2020-10-06 12:51] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:51] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:51] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:51] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:51] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 12:51] <==      Total: 4
+[DEBUG] [2020-10-06 12:51] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:51] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 12:51] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 12:51] <==    Updates: 1
+[DEBUG] [2020-10-06 12:51] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:51] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 12:51] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 12:51] <==    Updates: 1
+[DEBUG] [2020-10-06 12:51] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:51] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:51] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 12:51] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:51] <==    Updates: 1
+[DEBUG] [2020-10-06 13:27] test01InsertEmployee()
+[DEBUG] [2020-10-06 13:27] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 13:27] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 13:27] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 13:27] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 13:27] testDataSource()
+[DEBUG] [2020-10-06 13:27] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 13:27] LoginTimeout30
+[DEBUG] [2020-10-06 13:27] testSqlSession()
+[DEBUG] [2020-10-06 13:27] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@718aabd
+[DEBUG] [2020-10-06 13:27] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 13:27] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 13:27] ==> Parameters: 
+[TRACE] [2020-10-06 13:27] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 13:27] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 13:27] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 13:27] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 13:27] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 13:27] <==      Total: 4
+[DEBUG] [2020-10-06 13:27] test02InsertDepartment()
+[DEBUG] [2020-10-06 13:27] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 13:27] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 13:27] <==    Updates: 1
+[DEBUG] [2020-10-06 13:27] test03UpdateDepartment()
+[DEBUG] [2020-10-06 13:27] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 13:27] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 13:27] <==    Updates: 1
+[DEBUG] [2020-10-06 13:27] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 13:27] test05DeleteDepartment()
+[DEBUG] [2020-10-06 13:27] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 13:27] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 13:27] <==    Updates: 1
+[DEBUG] [2020-10-06 13:32] test01InsertEmployee()
+[DEBUG] [2020-10-06 13:32] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 13:32] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 13:32] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 13:32] ==>  Preparing: delete from employee where empno = ?
+[DEBUG] [2020-10-06 13:32] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 13:32] <==    Updates: 1
+[DEBUG] [2020-10-06 13:32] testDataSource()
+[DEBUG] [2020-10-06 13:32] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 13:32] LoginTimeout30
+[DEBUG] [2020-10-06 13:32] testSqlSession()
+[DEBUG] [2020-10-06 13:32] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@3bfee497
+[DEBUG] [2020-10-06 13:32] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 13:32] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 13:32] ==> Parameters: 
+[TRACE] [2020-10-06 13:32] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 13:32] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 13:32] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 13:32] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 13:32] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 13:32] <==      Total: 4
+[DEBUG] [2020-10-06 13:32] test02InsertDepartment()
+[DEBUG] [2020-10-06 13:32] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 13:32] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 13:32] <==    Updates: 1
+[DEBUG] [2020-10-06 13:32] test03UpdateDepartment()
+[DEBUG] [2020-10-06 13:32] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 13:32] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 13:32] <==    Updates: 1
+[DEBUG] [2020-10-06 13:32] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 13:32] test05DeleteDepartment()
+[DEBUG] [2020-10-06 13:32] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 13:32] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 13:32] <==    Updates: 1
+[DEBUG] [2020-10-06 13:33] test01InsertEmployee()
+[DEBUG] [2020-10-06 13:33] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 13:33] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 13:33] <==    Updates: 1
+[DEBUG] [2020-10-06 13:33] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 13:33] ==>  Preparing: delete from employee where empno = ?
+[DEBUG] [2020-10-06 13:33] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 13:33] <==    Updates: 1
+[DEBUG] [2020-10-06 13:33] testDataSource()
+[DEBUG] [2020-10-06 13:33] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 13:33] LoginTimeout30
+[DEBUG] [2020-10-06 13:33] testSqlSession()
+[DEBUG] [2020-10-06 13:33] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@571b996b
+[DEBUG] [2020-10-06 13:33] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 13:33] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 13:33] ==> Parameters: 
+[TRACE] [2020-10-06 13:33] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 13:33] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 13:33] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 13:33] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 13:33] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 13:33] <==      Total: 4
+[DEBUG] [2020-10-06 13:33] test02InsertDepartment()
+[DEBUG] [2020-10-06 13:33] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 13:33] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 13:33] <==    Updates: 1
+[DEBUG] [2020-10-06 13:33] test03UpdateDepartment()
+[DEBUG] [2020-10-06 13:33] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 13:33] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 13:33] <==    Updates: 1
+[DEBUG] [2020-10-06 13:33] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 13:33] test05DeleteDepartment()
+[DEBUG] [2020-10-06 13:33] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 13:33] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 13:33] <==    Updates: 1
+[DEBUG] [2020-10-06 13:51] testDataSource()
+[DEBUG] [2020-10-06 13:51] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 13:51] LoginTimeout30
+[DEBUG] [2020-10-06 13:51] testSqlSession()
+[DEBUG] [2020-10-06 13:51] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@5af61206
+[DEBUG] [2020-10-06 13:51] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 13:51] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 13:51] ==> Parameters: 
+[TRACE] [2020-10-06 13:51] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 13:51] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 13:51] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 13:51] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 13:51] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 13:51] <==      Total: 4
+[DEBUG] [2020-10-06 13:51] test02InsertDepartment()
+[DEBUG] [2020-10-06 13:51] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 13:51] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 13:51] <==    Updates: 1
+[DEBUG] [2020-10-06 13:51] test03UpdateDepartment()
+[DEBUG] [2020-10-06 13:51] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 13:51] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 13:51] <==    Updates: 1
+[DEBUG] [2020-10-06 13:51] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 13:51] test05DeleteDepartment()
+[DEBUG] [2020-10-06 13:51] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 13:51] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 13:51] <==    Updates: 1
+[DEBUG] [2020-10-06 13:51] test01InsertEmployee()
+[DEBUG] [2020-10-06 13:51] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 13:51] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 13:51] <==    Updates: 1
+[DEBUG] [2020-10-06 13:51] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 13:51] ==>  Preparing: delete from employee where empno = ?
+[DEBUG] [2020-10-06 13:51] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 13:51] <==    Updates: 1
+[DEBUG] [2020-10-06 13:51] test01AddEmployee()
+[DEBUG] [2020-10-06 13:51] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 13:51] ==> Parameters: 1005(Integer), ¹Ú±Ô¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 13:51] <==    Updates: 1
+[DEBUG] [2020-10-06 13:51] testDelEmployee()
+[DEBUG] [2020-10-06 13:51] ==>  Preparing: delete from employee where empno = ?
+[DEBUG] [2020-10-06 13:51] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 13:51] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] testDataSource()
+[DEBUG] [2020-10-06 14:27] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 14:27] LoginTimeout30
+[DEBUG] [2020-10-06 14:27] testSqlSession()
+[DEBUG] [2020-10-06 14:27] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@4a24c7b8
+[DEBUG] [2020-10-06 14:27] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 
+[TRACE] [2020-10-06 14:27] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 14:27] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 14:27] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 14:27] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 14:27] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 14:27] <==      Total: 4
+[DEBUG] [2020-10-06 14:27] test02InsertDepartment()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] test03UpdateDepartment()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 14:27] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 14:27] test05DeleteDepartment()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] test01InsertEmployee()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: delete from employee where empno = ?
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] test01AddEmployee()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 1005(Integer), ¹Ú±Ô¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] testDelEmployee()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: delete from employee where empno = ?
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] testDataSource()
+[DEBUG] [2020-10-06 14:27] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 14:27] LoginTimeout30
+[DEBUG] [2020-10-06 14:27] testSqlSession()
+[DEBUG] [2020-10-06 14:27] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@2833f8e4
+[DEBUG] [2020-10-06 14:27] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 
+[TRACE] [2020-10-06 14:27] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 14:27] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 14:27] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 14:27] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 14:27] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 14:27] <==      Total: 4
+[DEBUG] [2020-10-06 14:27] test02InsertDepartment()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] test03UpdateDepartment()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 14:27] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 14:27] test05DeleteDepartment()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] test01InsertEmployee()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: delete from employee where empno = ?
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] test01AddEmployee()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 1005(Integer), ¹Ú±Ô¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:27] testDelEmployee()
+[DEBUG] [2020-10-06 14:27] ==>  Preparing: delete from employee where empno = ?
+[DEBUG] [2020-10-06 14:27] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 14:27] <==    Updates: 1
+[DEBUG] [2020-10-06 14:30] testDataSource()
+[DEBUG] [2020-10-06 14:30] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 14:30] LoginTimeout30
+[DEBUG] [2020-10-06 14:30] testSqlSession()
+[DEBUG] [2020-10-06 14:30] sesionorg.apache.ibatis.session.defaults.DefaultSqlSession@4a05ed8
+[DEBUG] [2020-10-06 14:30] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 14:30] ==>  Preparing: SELECT DEPTNO ,DEPTNAME ,FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 14:30] ==> Parameters: 
+[TRACE] [2020-10-06 14:30] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 14:30] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 14:30] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 14:30] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 14:30] <==        Row: 2, ±âÈ¹, 10
+[DEBUG] [2020-10-06 14:30] <==      Total: 4
+[DEBUG] [2020-10-06 14:30] test02InsertDepartment()
+[DEBUG] [2020-10-06 14:30] ==>  Preparing: insert into department values(?, ?, ?)
+[DEBUG] [2020-10-06 14:30] ==> Parameters: 5(Integer), Çõ½Å(String), 11(Integer)
+[DEBUG] [2020-10-06 14:30] <==    Updates: 1
+[DEBUG] [2020-10-06 14:30] test03UpdateDepartment()
+[DEBUG] [2020-10-06 14:30] ==>  Preparing: update department set deptname=?, floor=? where deptno = ?
+[DEBUG] [2020-10-06 14:30] ==> Parameters: ¹«°á(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 14:30] <==    Updates: 1
+[DEBUG] [2020-10-06 14:30] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 14:30] test05DeleteDepartment()
+[DEBUG] [2020-10-06 14:30] ==>  Preparing: delete from department where deptno = ?
+[DEBUG] [2020-10-06 14:30] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 14:30] <==    Updates: 1
+[DEBUG] [2020-10-06 14:30] test01InsertEmployee()
+[DEBUG] [2020-10-06 14:30] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 14:30] ==> Parameters: 1004(Integer), ÀÌÀ¯¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 14:30] <==    Updates: 1
+[DEBUG] [2020-10-06 14:30] test02DeleteEmplyoee()
+[DEBUG] [2020-10-06 14:30] ==>  Preparing: delete from employee where empno = ?
+[DEBUG] [2020-10-06 14:30] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 14:30] <==    Updates: 1
+[DEBUG] [2020-10-06 14:30] test01AddEmployee()
+[DEBUG] [2020-10-06 14:30] ==>  Preparing: INSERT INTO EMPLOYEE (EMPNO , EMPNAME ,TITLE ,MANAGER ,SALARY ,DNO ) VALUES (?,?,?,?,?,?)
+[DEBUG] [2020-10-06 14:30] ==> Parameters: 1005(Integer), ¹Ú±Ô¿µ(String), °úÀå(String), 4377(Integer), 4100000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 14:30] <==    Updates: 1
+[DEBUG] [2020-10-06 14:30] testDelEmployee()
+[DEBUG] [2020-10-06 14:30] ==>  Preparing: delete from employee where empno = ?
+[DEBUG] [2020-10-06 14:30] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 14:30] <==    Updates: 1
