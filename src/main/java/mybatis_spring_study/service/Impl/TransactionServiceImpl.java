@@ -8,10 +8,10 @@ import mybatis_spring_study.dto.Department;
 import mybatis_spring_study.dto.Employee;
 import mybatis_spring_study.mapper.DepartmentMapper;
 import mybatis_spring_study.mapper.EmployeeMapper;
-import mybatis_spring_study.service.TransctionService;
+import mybatis_spring_study.service.TransactionService;
 
 @Service
-public class TransactionServiceImpl implements TransctionService {
+public class TransactionServiceImpl implements TransactionService {
 	@Autowired
 	private DepartmentMapper deptMapper;
 	@Autowired

@@ -14,15 +14,16 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import mybatis_spring_study.config.ContextRoot;
 import mybatis_spring_study.dto.Department;
 import mybatis_spring_study.dto.Employee;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "Classpath:/context-root.xml" })
+@ContextConfiguration(classes = {ContextRoot.class} )
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
-public class TranactionServiceImplTest {
-	protected static final Log log = LogFactory.getLog(TranactionServiceImplTest.class);
+public class TransactionServiceTest {
+	protected static final Log log = LogFactory.getLog(TransactionServiceTest.class);
 
 	@After
 	public void tearDown() throws Exception {
@@ -30,7 +31,7 @@ public class TranactionServiceImplTest {
 	}
 
 	@Autowired
-	private TransctionService service;
+	private TransactionService service;
 
 	@Test(expected = DuplicateKeyException.class)
 	public void testATrRegisterTransaction_Dept_Fail() throws SQLException {

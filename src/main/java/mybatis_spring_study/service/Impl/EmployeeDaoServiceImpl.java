@@ -8,7 +8,7 @@ import mybatis_spring_study.dto.Employee;
 import mybatis_spring_study.mapper.EmployeeMapper;
 import mybatis_spring_study.service.EmployeeService;
 @Service
-public class EmployeeDaoSerImpl implements EmployeeService {
+public class EmployeeDaoServiceImpl implements EmployeeService {
 
 	@Autowired
 	private EmployeeMapper mapper;
