@@ -4,6 +4,8 @@ deptname varchar2(50) not null,
 floor number null,
 primary key (deptno)
 );
+
+
 create table employee (
 empno number not null primary key,
 empname varchar2(50) not null,

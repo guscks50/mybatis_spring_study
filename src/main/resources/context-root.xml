@@ -15,6 +15,8 @@
 
  <import resource="classpath:context-datasource.xml"/>
  <import resource="classpath:contest-sqlsession.xml"/>
+ <import resource="classpath:context-transaction.xml"/>
  
  <context:component-scan base-package="mybatis_spring_study.mapper"/>
+ <context:component-scan base-package="mybatis_spring_study.service" />
 </beans>
