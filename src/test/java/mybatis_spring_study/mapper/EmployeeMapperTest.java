@@ -32,7 +32,7 @@ public class EmployeeMapperTest {
 	@Test
 	public void test01InsertEmployee() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Employee employee = new Employee(1004, "쏘대장", "과장", new Employee(4377), 3000000, new Department(1));
+		Employee employee = new Employee(1004, "대장", "과장", new Employee(4377), 3000000, new Department(1));
 		int res = mapper.insertEmployee(employee);
 		Assert.assertEquals(1, res);
 		
@@ -42,7 +42,7 @@ public class EmployeeMapperTest {
 	@Test
 	public void test02DeleteEmployee() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Employee employee = new Employee(1004, "쏘대장", "과장", new Employee(4377), 3000000, new Department(1));
+		Employee employee = new Employee(1004, "대장", "과장", new Employee(4377), 3000000, new Department(1));
 		int res = mapper.deleteEmployee(employee);
 		Assert.assertEquals(1, res);
 	}

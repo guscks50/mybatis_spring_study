@@ -33,7 +33,7 @@ public class DepartmentMapperTest {
 	@Test
 	public void test05DeleteDepartment() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(5, "마케팅2", 10);
+		Department department = new Department(5, "회계2", 10);
 		int res = mapper.deleteDepartment(department);
 		Assert.assertEquals(1, res);
 		
@@ -42,7 +42,7 @@ public class DepartmentMapperTest {
 	@Test
 	public void test02InsertDepartment() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(5, "마케팅", 20);
+		Department department = new Department(5, "회계", 20);
 		int res = mapper.insertDepartment(department);
 		Assert.assertEquals(1, res);
 	}
@@ -50,7 +50,7 @@ public class DepartmentMapperTest {
 	@Test
 	public void test03UpdateDepartment() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(5, "마케팅2", 10);
+		Department department = new Department(5, "회계2", 10);
 		int res = mapper.updateDepartment(department);
 		Assert.assertEquals(1, res);
 	}
